@@ -1,0 +1,30 @@
+create table student(
+roll int primary key auto_increment,
+name varchar(12),
+address varchar(12),
+email varchar(15),
+password varchar(12)
+);
+
+create table course(
+cid int primary key auto_increment,
+cname varchar(12),
+fee int,
+duration varchar(12)
+);
+
+create table student_course
+(
+roll int,
+cid int,
+foreign key(roll) references student(roll),
+foreign key(cid) references course(cid)
+);
+
+
+
+
+
+//////////////////
+
+select s.roll, s.name, s.address, s.email, c.cname, c.fee, c.duration from Student s INNER JOIN course c INNER JOIN student_course sc ON s.roll = sc.roll AND c.cid = sc.cid AND c.cname = ?
