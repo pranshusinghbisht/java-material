@@ -1,0 +1,25 @@
+*) class and table
+*) mapping -> Annotation or XML
+
+#Annotaion
+
+make a class (assume as entity(class representative(like monitor of class in school)
+@Entity -> javax.persistence.Entity
+
+
+//@Entity(name="student_details)
+i can change the name of entity by like this
+
+@Table :-> this annotation is used for the rename and change the details of the table
+@Table(name="myStudent")
+
+
+
+*) now go to the hibernate.cfg.xml(configuration file) and add one more property
+<mapping class = "package.location" />
+
+note
+at starting we have to open session (factory.openSession())
+then we can use getCurretnSession number of times
+
+

@@ -19,6 +19,7 @@ public class App
         SessionFactory factory = new Configuration().configure("hibernate.cfg.xml").buildSessionFactory();
 
         System.out.println(factory);
+	System.out.println(factory.isClosed());
 
 //        factory.getCurrentSession();
 
