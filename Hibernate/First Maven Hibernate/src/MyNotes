@@ -1,0 +1,22 @@
+I have make (hibernate.cfg.xml) file inside main->java
+
+now DTD is required so... go to google -> search hibernate dtd -> hibernate configuration DTD
+now copy Doctype content -> paste inside (hibernate.cfg.xml)
+
+now we have to write properties
+*) <hibernate-configuration>
+*) inside -> <session-factory>
+*) inside ->
+<property name="connection.driver_class">
+,<property name="connection.url">
+,<property name="connection.username">
+,<property name="connection.password">
+<property name="dialect">(which type of lang {mysql})
+
+,(now if i want to create table automatically)
+<property name="hbm2ddl.auto">update</property>
+
+,(hibernate makes query by own, if i want to see that query which is fired by hibernate then we use)
+<property name="show_sql">true</property>
+
+etc;
