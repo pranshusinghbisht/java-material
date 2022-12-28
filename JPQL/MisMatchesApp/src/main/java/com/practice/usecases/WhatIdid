@@ -1,0 +1,40 @@
+--if we try to take 2 address (one for home and another for office ) and then try to persist the employee obj we will get exception "repeated column"
+
+approach 1:-
+--------------
+
+--we can solve this problem by overriding the column names of Embedded obj by using "@AttributeOverrides" annotation.
+
+
+
+approach 2:-
+-------------
+
+if any emp has more than two address then taking too many columns inside a table will violates the rules of normalization.
+
+--to solve this problem we need to use @ElementCollection annotaion, and let the user add the multiple addresses using List or Set.
+
+--in this case ORM s/w will generate a seperate table to maintain all the addresses details with a Foreign key that reffers the PK of Employee table.
+
+
+
+
+
+
+
+--------------------------------------------------------------
+
+--when we execute the above application 2 tables will be created :-
+
+1.employee :- which will contains only Employee details (it will not contains any details of any address)
+
+2.employee_addresses  :- this table will contains the details of all the addresses with a FK column employee_eid which reffers the eid column of employee table.
+
+
+
+
+Note:- if we want to change the 2nd table 'employee_addresses' and the FK column with our
+our choice name then we need to use @JoinTable  and @JoinColumn
+
+
+
