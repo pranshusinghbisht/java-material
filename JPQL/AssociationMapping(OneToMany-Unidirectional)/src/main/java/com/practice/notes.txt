@@ -1,0 +1,17 @@
+Child class contain foreign key
+
+department_employee;
+this linking table contain primary key of two tables
+
+    @OneToMany(cascade = CascadeType.ALL)
+
+    (it will deleted...)
+    do not persit these
+
+            em.persist(emp1);
+            em.persist(emp2);
+
+
+we can change the 3rd generated table name as well as their column names also
+
+@JoinTable(name="dept_emp",joinColumns=@JoinColumn(name="did"),inverseJoinColumns=@JoinColumn(name="eid"))
