@@ -1,0 +1,10 @@
+I want to manange bidirectiona mapping through one table.
+means suppose i wanna make F.K in laptop table
+
+we will use in student entity class in
+
+
+ @OnetoOne(mappedBy = "student")
+ private Laptop laptop;
+
+     // cascade = CascadeType.ALL we do this because we want to change in parent entity class if will automatically oration with child class
