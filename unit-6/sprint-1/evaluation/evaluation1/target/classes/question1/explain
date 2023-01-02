@@ -1,0 +1,11 @@
+What are the advantages of using Hibernate over JDBC?
+ans:
+1 In hibernate we don't have to deal with a lot of exception handling, try catch , but using jdbc we have to deal with a lot of try catch,exception like that;
+
+2. jdbc cannot store the java obj into the table directly but by hibernate can. 
+
+3.jdbc code is db dependent code because it uses db s/w dependent queries. so it's not 100 % portable but there is no issue in hibernate
+
+4 jdbc code having boiler plate code problem (writing the same code except sql queries in multiple classes of our application again and again but in hibernate this problem is resolved;
+
+5 after the select operation we get resultset  the this rs cannot transfer from one layer to another layer and get the data from the resultset we need to now the structure of the resultset.

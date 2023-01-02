@@ -1,0 +1,43 @@
+
+Q1/- Explain about the life-cycle of a Spring Bean.
+
+
+
+Answer:
+
+Bean life-cycle:
+ For ordinary java class constructor and finalize() methods can be considered as life cycle methods. These
+methods will be called automatically by the JVM,
+Spring container will control the life-cycle of a spring bean, i.e. from instantiation to destruction.
+Spring bean class is POJO class, it need not implements any spring f/w API specific interface or extend any
+class to facilitate the spring container to control the life cycle of a spring bean. i.e. for spring beans, component
+contract is not required.
+Life-cycle of a spring bean has 5 stages:
+1. Does not exist
+2. Instantiated
+3. Initialized
+4. Service
+5. Destroy
+1. Does not exist phase:
+Initially a spring bean object does not exist, if the bean object is in singleton scope then bean is instantiated by
+container at the time of loading the xml file.
+If the scope is prototype then it is instantiated at the time of pulling the object/utilizing that object. (i.e. at the
+time of calling the getBean() method).
+2. Instantiation phase:
+Spring container loads the spring bean class into the memory and creates the bean class object.
+after that then bean class object is created, spring container uses DI to populate the bean fields
+(properties/variables)
+All the dependencies will be resolved for a spring bean before its instantiation is finished.
+3. Initialization phase:
+Spring Day1 27
+If inside the spring bean class any user-defined init-method is configured , spring container will call that
+method.
+Note:- unless initialization phase is over , spring container does not gives bean reference to the caller.
+4. Service phase / Ready to use phase:
+Here spring container provides the bean object reference to the caller, then caller can call its business method
+on that bean object.
+5. Destruction phase:
+Upon the container shutdown (when we call close() method on the container class ) spring container will call
+user-defined destroy() method if it is configured, just before bean instance is garbage collected.
+Note:- when we shutdown the container, all the associated bean obj will be eligible for the garbage
+collection.

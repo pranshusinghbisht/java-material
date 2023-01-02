@@ -1,0 +1,40 @@
+Q2.limitation of JDBC based persistence logic over JPA
+
+When it comes to deciding how to communicate with back-end database systems, software architects face a significant technological challenge. The debate between JPA and JDBC is often the deciding factor, as the two database technologies take very different approaches to work with persistent data. Let’s analyze the key differences between them.
+1  Database Interactions
+JDBC allows us to write SQL commands to read data from and update data to a relational database. JPA, unlike JDBC, allows developers to construct database-driven Java programs utilizing object-oriented semantics. The JPA annotations describe how a given Java class and its variables map to a given table and its columns in a database.
+
+2. Managing Associations
+When associating database tables in a query with JDBC, we need to write out the full SQL query, while with JPA, we simply use annotations to create one-to-one, one-to-many, many-to-one, and many-to-many associations.
+
+Let's say our employee table has a one-to-many relationship with the communication table:
+
+@Entity
+@Table(name = "employee")
+public class Employee implements Serializable {
+ 
+    @OneToMany(mappedBy = "employee", fetch = FetchType.EAGER)
+    @OrderBy("firstName asc")
+    private Set communications;
+}
+
+3. Database Dependency
+JDBC is database-dependent, which means that different scripts must be written for different databases. On the other side, JPA is database-agnostic, meaning that the same code can be used in a variety of databases with few (or no) modifications.
+
+
+
+4. Exception Handling
+Because JDBC throws checked exceptions, such as SQLException, we must write it in a try-catch block. On the other hand, the JPA framework uses only unchecked exceptions, like Hibernate. Hence, we don't need to catch or declare them at every place we're using them.
+
+
+5. Performance
+The difference between JPA and JDBC is essentially who does the coding: the JPA framework or a local developer. Either way, we'll have to deal with the object-relation impedance mismatch.
+
+To be fair, when we write SQL queries incorrectly, JDBC performance can be abysmally sluggish. When deciding between the two technologies, performance shouldn't be a point of dispute. Professional developers are more than capable of producing Java applications that run equally well regardless of the technology utilized.
+
+6. JDBC Dependency
+JPA-based applications still use JDBC under the hood. Therefore, when we utilize JPA, our code is actually using the JDBC APIs for all database interactions. In other words, JPA serves as a layer of abstraction that hides the low-level JDBC calls from the developer, making database programming considerably easier.
+
+7. Transaction Management
+In JDBC, transaction management is handled explicitly by using commit and rollback. On the other hand, transaction management is implicitly provided in JPA.
+

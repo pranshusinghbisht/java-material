@@ -1,0 +1,28 @@
+
+
+Q8. What are the rules for a table to be in 1NF, 2NF, and 3NF?
+
+ans:
+     First Normal Form (1NF)
+     Every column in the table must be unique.
+     Separate tables must be created for each set of related data.
+     Each table must be identified with a unique column or concatenated columns called the primary key.
+     No rows may be duplicated.
+     no columns may be duplicated.
+     
+     Second Normal Form (2NF):
+     Second Normal Form (2NF) is based on the concept of full functional dependency. Second Normal Form 
+     applies to relations with composite keys, that is, relations with a primary key composed of two or more
+     attributes. A relation with a single-attribute primary key is automatically in at least 2NF. A relation 
+     that is not in 2NF may suffer from the update anomalies.
+
+     To be in second normal form, a relation must be in first normal form and relation must not contain any 
+     partial dependency. A relation is in 2NF if it has No Partial Dependency, i.e., no non-prime attribute
+    (attributes which are not part of any candidate key) is dependent on any proper subset of any candidate 
+     key of the table.
+     
+     Third Normal Form (3NF):
+
+     A relation is in third normal form, if there is no transitive dependency for non-prime attributes as well 
+     as it is in second normal form. A relation is in 3NF if at least one of the following condition holds in 
+     every non-trivial function dependency X –> Y: X is a super key.

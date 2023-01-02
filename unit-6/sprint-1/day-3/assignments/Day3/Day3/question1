@@ -1,0 +1,6 @@
+Q1/- Explain the Entity class life-cycle.
+ans:
+
+The life cycle of entity objects consists of four states: New, Managed, Removed and Detached. 
+When an entity object is initially created its state is New. 
+In this state the object is not yet associated with an EntityManager. persistence.

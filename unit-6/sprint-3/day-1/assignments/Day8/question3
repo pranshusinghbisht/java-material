@@ -1,0 +1,24 @@
+
+Q3/- What are the challenges of developing an Enterprise application?
+
+Answer:
+.1 The need for quick adaptation:
+ the field of enterprise applications development, the need to be flexible and respond instantly to changes is especially acute. Although the work of analysts and system architects, based on forecasting and analysis, is still vital for the enterprise’s work, you need to be prepared to make changes literally in the midair, because what seemed like a reasonable decision yesterday may lose its relevance today. In such conditions, the only right decision is a course on flexibility and customization at all levels.
+ 
+ 2 More strict security requirements:
+ A cyberattack can cost large companies millions of dollars, and it threatens small and medium-sized businesses with bankruptcy. That is why it is vital to improve the security system from a technical point of view. Standard tips for preventing cyberattacks include:
+
+Encrypt data.
+Use special anti-malware and authorization tools.
+Use hack detection tools.
+Back up data.
+Restrict access to confidential information.
+
+3 Processing and storage of large amounts of data:
+Local data storage gives companies the freedom not to depend on external servers and manage all data autonomously. Such an enterprise application is acquired once, and then all data is stored on its own servers. This option is somewhat more expensive, but then everything belongs to the enterprise. The solution is especially suitable for sensitive customer data as it lends itself to subtle customization.
+
+
+4 Integration with other systems:
+
+Some enterprises still use "monolithic" systems. Monolithic architecture means that all functionally distinguishable aspects, such as data input and output, data processing, error handling and user interface, are all interwoven, and do not contain architecturally separate components. If a business is heavily dependent on these systems, integration becomes a problem due to the size and complexity of the application. Testing and coding should cover both the new application and the full integration 
+testing plan every time some changes are made.

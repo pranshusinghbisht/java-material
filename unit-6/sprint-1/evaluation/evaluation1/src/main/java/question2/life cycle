@@ -1,0 +1,45 @@
+Explain the Life-cycle of Entity class with example
+
+ans:
+
+1)Transient state
+2)Persistent state
+3)Detached state
+
+
+1)Transient state:
+The transient state is the initial state of an object
+Once we create an instance of POJO class then the object entered in the transient state.
+an object is not associated with the Session so the transient state is not related to any database
+
+example:
+
+student s=new student();
+s.setId(100);  
+s.setFirstName("geeta");  
+s.setLastName("makadi");  
+
+
+Persistent state:
+object associated with the session entered in the persistent state.
+we can say that an object is in the persistence state when we save or persist it
+example:
+
+method of persistent state
+session.save(s);  
+session.persist(s);  
+session.update(s);  
+session.saveOrUpdate(s);  
+session.lock(s);  
+session.merge(s); 
+
+
+Detached State
+when  we either close the session or clear its cache, then the object entered into the detached state.
+
+example:
+method
+session.close();  
+session.clear();  
+session.detach(s);  
+session.evict(s);

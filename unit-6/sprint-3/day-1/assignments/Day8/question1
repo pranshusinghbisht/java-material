@@ -1,0 +1,11 @@
+Q1/- What is the J2EE, list out some of the Application Server names
+
+
+J2EE applications are made up 
+of components such as JavaServer Pages (JSP), Java servlets, and Enterprise JavaBeans (EJB) modules. These components enable software developers to build large-scale, distributed applications. Developers package J2EE applications in Java Archive (JAR) files (similar to zip files), which can be distributed to production sites. Administrators install J2EE applications onto the Application Server by deploying J2EE JAR files onto
+ one or more server instances (or clusters of instances).
+ 
+ Application Server names
+ 1)Apache Tomcat;
+ 2)Apache TomEE;
+ 3)Apache Geronimo

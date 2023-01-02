@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+<bean id="s1" class="com.masai.Student">
+
+<constructor-arg name="roll" value="5" />
+<constructor-arg name="name" value="abcdef" />
+<constructor-arg name="marks" value="500" />
+
+
+</bean>
+
+<bean id="c1" class="com.masai.Collage">
+
+<property name="collage_name" value="sggs"/>
+<property name="student" ref="s1"/>
+<property name="collage_address" value="adc"/>
+
+</bean>
+
+</beans>

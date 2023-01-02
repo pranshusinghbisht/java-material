@@ -1,0 +1,9 @@
+
+
+Q4. Explain about the basic properties of pom.xml file.
+
+ANS=>
+      Maven properties are value placeholders, like properties in Ant.
+      Their values are accessible anywhere within a POM by using the notation
+      ${X}, where X is the property. Or they can be used by plugins as default
+      values, for example: In your case you have defined properties as version of java.

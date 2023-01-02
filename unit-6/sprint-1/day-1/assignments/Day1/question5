@@ -1,0 +1,8 @@
+
+
+Q5. What are the different phases of the default life cycle?
+
+ans:
+      A Maven lifecycle consists of a sequence of named phases: prepare-resources,
+      compile, package, and install among other. There is phase that captures compilation
+      and a phase that captures packaging.

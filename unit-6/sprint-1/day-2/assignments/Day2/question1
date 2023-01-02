@@ -1,0 +1,31 @@
+Q1-> Explain Layared Architecture in Business application;
+
+
+Answar:
+Layered architectures are said to be the most common and widely used architectural framework in software development. It is also known as an n-tier architecture and describes an architectural pattern composed of several separate horizontal layers that function together as a single unit of software. A layer is a logical separation of components or code:
+
+
+Components of a Layered Architecture
+Now, the number of layers in a layered architecture is not set to a specific number and is usually dependent on the developer or software architect. It is important to note that this framework will usually always have a user interaction layer, a layer for processing, and a layer that deals with data processing. These are described further as:
+
+
+Presentation Layer – responsible for user interactions with the software system
+Application/Business Layer – handles aspects related to accomplishing functional requirements
+Domain Layer – responsible for algorithms, and programming components
+Infrastructure/Persistence/Database Layer – responsible for handling data, databases
+
+Advantages and Disadvantages
+The following are the benefits and drawbacks that exist with this software pattern:
+
+Advantages
+
+The framework is simple and easy to learn and implement.
+There is reduced dependency because the function of each layer is separate from the other layers.
+Testing is easier because of the separated components, each component can be tested individually.
+Cost overheads are fairly low.
+Disadvantages
+
+Scalability is difficult because the structure of the framework does not allow for growth.
+They can be difficult to maintain. A change in a single layer can affect the entire system because it operates as a single unit.
+There is interdependence between layers since a layer depends on the layer above it to receive data.
+Parallel processing is not possible.

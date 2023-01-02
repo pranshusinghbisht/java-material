@@ -1,0 +1,32 @@
+
+
+Q1/- What do you mean by the IOC, explain the life cycle of the Spring
+Bean.
+
+
+Ans
+In general, when a class depends on another class then the dependent class creates the object of its
+dependency class directly, and then uses(call) its methods, it is called the dependency object created in the
+main control.
+But if some external entity is taking care of creating the dependency object then we say that control is inverted
+to some external entity, this is called Inversion of Control (IOC).
+The IOC is a design principle that is purely conceptual, in which an external entity provides the dependencies to the
+application components instead of hard coding them in the component class.
+
+
+Dependency Injection:
+Here external entity will push the dependency object to the dependent class (configuring the object inside some
+container. and the container will push the dependency object to the dependent class).
+Note: In the spring framework, The spring container is the external entity that will push the dependency object to
+the dependent class.
+
+
+
+
+
+life cycle of the Spring  Bean:
+          
+Bean life cycle is managed by the spring container    When we run the program 
+ spring container gets started. after that, the container creates the
+ instance of a bean as per the request, and then dependencies are injected. and finally  bean is destroyed 
+ when the spring container is closed.

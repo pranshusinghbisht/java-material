@@ -1,0 +1,140 @@
+
+
+Q4/- What is auto wiring in Spring, how many types of Auto wiring are there in spring,
+explain with an example.
+
+
+
+The process of creating association between/among application components is known as "wiring".(variable is
+wired with appropriate object)
+We have 2 kind of wiring in spring application:
+1. Explicit wiring
+2. Auto-wiring (implicit wiring)
+If a spring developer specifies the associations for the dependency bean by <property> tag or <constructorarg> tag, it is known as explicit wiring.
+Whereas if spring container on its own detects the dependencies implicitly and injecting them into the
+dependent bean is known as "auto-wiring".
+To instruct the spring container to perform auto-wiring for a particular bean, we make use of the "autowire"
+attribute inside the <bean> tag with any one of following values:
+1. no (default)
+2. byName
+3. byType
+4. constructor
+ In bean auto-wiring, spring container automatically injects a bean dependencies by either calling a setter
+method or calling parameterized constructor without writing explicitly inside the
+spring configuration file.
+Limitation of bean auto-wiring:
+1. It can be used only to inject the objects but not the simple value dependencies.
+2. If container have multiple dependencies of same type to inject , then ambiguity problem may raise.
+Note: <bean> tag has "autowire" attribute and its default value is "no" . it means by default auto-wiring is
+disabled in xml based auto-wiring.
+Whereas in annotation based auto-wiring the default type is "byType".
+1. byName:
+In this strategy , if a bean id attribute value in applicationContext.xml file matches with the variable/property
+name of a dependent bean, then spring container implicitly performs the setter injection into the dependent
+bean , it is known as auto-wire byName
+If the dependency is unmatched , container does not inject that dependency . its means property remains
+with null value,
+Example:
+Spring Day1 19
+With respect to previous dummy DAO application:
+<bean id="dao" class="com.masai.daoApp.DAOBean"/>
+<bean id="service" class="com.masai.daoApp.ServiceBean" autowire="byName" />
+<bean id="pb" class="com.masai.daoApp.PresentationBean" autowire="byName" />
+byType:
+In this strategy spring container will search for a bean class in spring configuration file, that matched with the
+property type.
+If matched then spring container injects that dependency obj by calling the setter method of
+dependent class.
+If unmatched then that property will remain with null value.
+Note:- if more than one bean of same type is encountered in spring configuration file ,then container
+will throw "UnsatifyDependencyException"
+ex:-
+<bean id="db" class="com.masai.daoApp.DAOBean"/>
+<bean id="sb" class="com.masai.daoApp.ServiceBean" autowire="byType" />
+<bean id="pb" class="com.masai.daoApp.PresentationBean" autowire="byType" />
+Here id could be anything.
+example :- ambiguity error:
+<bean id="db" class="com.masai.daoApp.DAOBean"/>
+<bean id="db2" class="com.masai.daoApp.DAOBean"/>
+<bean id="sb" class="com.masai.daoApp.ServiceBean" autowire="byType" />
+<bean id="pb" class="com.masai.daoApp.PresentationBean" autowire="byType" />
+constructor auto-wiring:
+In this strategy , spring container uses constructor injection instead of setter injection.
+dependency resolution is done by using max number of argument constructor, if constructors are overloaded.
+Note:- it first uses byName and if not found then it uses byType , and in case byType is matched with
+more that 1 then ambiguity exception will occur.
+And if not matched ,here variable will not remain null, it will throw "UnsaticfiedDependencyException"
+This kind of auto-wiring is least preferred because of constructor ambiguity. and circular dependency
+example:
+Spring Day1 20
+A.java:
+--------
+package com.masai;
+public class A {
+public void funA() {
+System.out.println("inside funA of A");
+}
+}
+B.java:-
+----------
+package com.masai;
+public class B {
+public void funB() {
+System.out.println("inside funB of B");
+}
+}
+Demo.java:
+------------
+package com.masai;
+public class Demo {
+private A a1;
+private A a2;
+private B b1;
+public Demo() {
+System.out.println("inside zero argument constructor..");
+}
+public Demo(B b1, A a1) {
+this.b1=b1;
+this.a1=a1;
+System.out.println("inside 2 argument constructor..");
+}
+public Demo(B b1, A a1,A a2) {
+this.b1=b1;
+this.a1=a1;
+this.a2=a2;
+System.out.println("inside 3 argument constructor..");
+}
+public void showDetails() {
+System.out.println("inside showDetails....");
+System.out.println("b1 is :"+b1);
+System.out.println("a1 is :"+a1);
+System.out.println("a2 is :"+a2);
+}
+}
+Spring Day1 21
+applicationContext.xml:-
+<bean id="d1" class="com.masai.Demo" autowire="constructor" />
+<bean id="a5" class="com.masai.A"/>
+<bean id="a6" class="com.masai.A" />
+<bean id="b5" class="com.masai.B" />
+Main.java:
+----------
+package com.masai;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+public class Main {
+public static void main(String[] args) {
+//activate the spring container by locating the spring configuration file..
+ApplicationContext ctx= new ClassPathXmlApplicationContext("applicationContext.xml");
+Demo d= ctx.getBean("d1",Demo.class);
+d.showDetails();
+}
+}
+-here container will create the object of Demo class by executing zero argument constructor, because 3
+argument and 2 argument constructor does not qualify for the dependencies (they generate ambiguity
+exception A a1)
+-if we change the id of any A class inside the spring configuration file as "a1" then 2nd argument
+constructor will gets the priority (here 3rd argument constructor will raise the ambiguity exception at A a2).
+-if we change the id of one A class as a1 and another A class as a2 then 3rd argument constructor will gets
+the priority,
+here B will follow byType and A a1 and A a2 will follow byName strategy.

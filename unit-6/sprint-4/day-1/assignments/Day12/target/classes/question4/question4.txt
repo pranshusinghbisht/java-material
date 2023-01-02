@@ -1,0 +1,60 @@
+
+
+  Q4/- Explain about the various  HTTP request methods and  some of the commonly used 
+  HTTP response status codes.
+  
+  
+  ANS =>
+      there is many http request methods but majorly four request methods 
+      are use.
+      1)GET
+      2)POST
+      3)PUT
+      4)DELETE
+
+      ->when we do http request using GET it will retrieve the data from the web server.
+
+      ->when we do http request using POST it will change the state of particular
+        data from webserver it may effect the webserver.
+
+     ->when we do http request using PUT it will change all the webserver data
+       and update it what if we want to update
+
+     ->when we do http request using DELETE it will delete the specific data from webserver.
+
+       HTTP status code shows that whether this HTTP request successfully completed or not.
+       there is total five groups in status code.
+       it will give response according to our status code
+
+       Informational responses (100–199)
+       Successful responses (200–299)
+       Redirection messages (300–399)
+       Client error responses (400–499)
+       Server error responses (500–599)
+
+     ->code 200:
+       this is ""OK" status code for a succesfull http request.
+
+     ->code 201:
+       which means http request is succesfull and in output new resource is created
+
+
+     ->code 204:
+       which means http request is succesfull and need not to return output
+
+     ->code 304:
+       which means if respose is not modified then user can continue to use same response.
+
+     ->code 400:
+       if server not able to understand and process a request due to client side error like invalid
+       formatting,missing data etc.it will generate 400 status code
+
+     ->code 401:
+       when authentication is mandatory but client failed to provide it
+
+     ->code 404:
+       this is one of the famous and most commonly occur status code.when request is valid
+       but server not able to find the resource this code occurs.
+
+     ->code 500:
+       when server not full-fill the request due to any unexpexted issue

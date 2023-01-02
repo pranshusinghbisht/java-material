@@ -1,0 +1,22 @@
+
+
+Q3/- What is the difference between SOAP and REST ?
+
+ ANS=>
+       Soap means Simple object access protocol.
+
+       Soap is one XML protocol.when we need to communicate between 
+       web application and web server this soap returns the response 
+       in XML format since this XML is language and platform independent.
+
+       creating this web services using soap is very complex because 
+       soap is very heavy weight application.
+
+      So to reduce this complexity developer made one light weight,another arcitechtrual style
+      "REST".
+
+      REST full form is represantional state transfer.this style transfer the data in XML,JSON 
+      format.
+
+      REST  also create a web service and give response through http protocol and also allow 
+      the client  to access with help of http protocol

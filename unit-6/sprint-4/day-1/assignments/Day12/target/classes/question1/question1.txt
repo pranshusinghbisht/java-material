@@ -1,0 +1,25 @@
+
+Q1/- Explain the Java-based Spring MVC architecture.
+
+
+ ans:
+ 
+ Spring MVC means model-view-controller.
+
+     Previously there is MVC model where we use servlet class 
+     in that we validate the data which comes from web application then servlet class
+     gives that data to service layer to perform business logic service layer called
+     the method from data access layer to perform business logic on client data for that data 
+     access layer fetch data from database and gives to data access layer.
+     after that service layer perform the business logic and it gives back to servlet class.
+     and servlet gives it to JSP because jsp is easy to handle when there is rich UI.
+     so jsp show the final data to client.
+
+     In this Servlet works as controller because it is just controlling the flow of whole process.
+     jsp work as view in this because it presents the data to client
+     and model mean java bean class because in java data stores as object and we are using bean class
+     to create object.
+
+     In Spring MVC we don't need this servlet class we can directly use Spring boot framework dispatcher
+     servelt class.we don't need to configure servlet class so it's gives less burden to developer.
+ 

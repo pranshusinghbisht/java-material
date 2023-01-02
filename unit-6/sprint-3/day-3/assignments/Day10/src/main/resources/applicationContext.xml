@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean id="d1" class="com.masai.Department">
+<constructor-arg name="deptId" value="1"/>
+<constructor-arg name="deptName" value="sales"/>
+<constructor-arg name="location" value="bhopal"/>
+</bean>
+
+<bean id="d2" class="com.masai.Department">
+<constructor-arg name="deptId" value="2"/>
+<constructor-arg name="deptName" value="Marketing"/>
+<constructor-arg name="location" value="abc"/>
+</bean>
+
+
+<bean id="d3" class="com.masai.Department">
+<constructor-arg name="deptId" value="3"/>
+<constructor-arg name="deptName" value="Account"/>
+<constructor-arg name="location" value="abcde"/>
+</bean>
+
+<bean id="e1" class="com.masai.Employee">
+
+<constructor-arg name="empId" value="12" />
+<constructor-arg name="empName" value="abcd" />
+<constructor-arg name="address" value="swerdc" />
+<constructor-arg name="salary" value="900" />
+
+</bean>
+
+<bean id="e2" class="com.masai.Employee">
+
+<constructor-arg name="empId" value="23" />
+<constructor-arg name="empName" value="mta" />
+<constructor-arg name="address" value="asde" />
+<constructor-arg name="salary" value="50000" />
+
+</bean>
+
+<bean id="e3" class="com.masai.Employee">
+
+<constructor-arg name="empId" value="20" />
+<constructor-arg name="empName" value="rosd" />
+<constructor-arg name="address" value="asde" />
+<constructor-arg name="salary" value="50000" />
+
+</bean>
+
+<bean id="D" class="com.masai.Demo" scope="prototype" init-method="myInit" destroy-method="cleanUp" lazy-init="true">
+
+<property name="theMap">
+	<map>
+	
+	<entry key-ref="d1" value-ref="e1"/>
+	<entry key-ref="d2" value-ref="e2"/>
+	<entry key-ref="d3" value-ref="e3"/>
+	
+	</map>
+</property>
+</bean>
+
+
+
+
+
+
+
+
+
+
+</beans>

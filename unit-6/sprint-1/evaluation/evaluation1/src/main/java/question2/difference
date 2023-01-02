@@ -1,0 +1,11 @@
+Explain difference between JPA and Hibernate:
+ans:
+JPA is a specification and Hibernate is its one of the famous implementation.
+
+Hibernate is one of the ORM base framework
+JPA is a java persistence API
+JAP provides a standard API to work with any kind of ORM based software
+
+Kibernate provide its own API to develop ORM based persistence logic, if we use those api then our application will become vendor lock, i.e we can not port our application accross multiple
+
+

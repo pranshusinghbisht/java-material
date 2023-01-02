@@ -1,0 +1,36 @@
+
+
+Q6.What are the different types of Maven repositories?
+
+ans:
+    There are 3 types of maven repository: Local Repository. Central Repository. Remote Repository.
+    1. Local Maven Repository
+    Local repositories are the folders or directory on your machine where maven is used
+    i.e. a local machine that contains the cached jars and dependencies required by your
+    project and other artifacts that are built by you on your machine but not released yet. 
+    The operations that the maven user can perform is to clean the local repository if any 
+    memory or space-related issue is there on their local repository or completely erase the
+    data on this repository that will further lead to redownloading of the dependencies required
+    by your project. The local repository can be mentioned in your settings.xml file in the following manner –
+    
+    2. Remote Maven Repository
+    The remote repositories are the resources that are located remotely and contain directory having jars,
+    library files, and plugins, and other artifacts that might be useful and are accessed by using the protocols
+    such as https:// of file:// protocol. These remote repositories are further segregated into the repositories
+    that are kept at a remote place and shared between multiple individuals and developers for the private use of 
+    a company or the third party to maintain and share artifacts. You can mention your remote repositories inside 
+    the settings.xml file in the repositories tag and can add multiple repository tags for multiple remote repositories
+    if you wish to configure them in the following way –
+    
+    3. Central Maven Repository
+   The second remote repository in the maven is the central repository that is available for downloading the dependencies
+   in your maven project and also to release the artifacts that you want to on the central repository. The link for the 
+   central maven repository is https://repo.maven.apache.org/maven2/ while the site that is available for searching the
+   maven dependencies available in the central repository of maven is – https://search.maven.org/. This type of remote
+   repository is also called and referred to as the central repository and is available to all and is open source. This
+   repository is provided by the maven community. There is no need for any configurations in settings.xml file for a 
+   central repository.
+     
+     
+     
+     

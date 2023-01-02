@@ -1,0 +1,18 @@
+
+
+Q3/- What is the difference between WebApplication and Web-services?
+
+  ANS =>
+
+        Web services is a part of WebApplication.
+
+        In WebApplication we can generate a   html form like a web page response.
+        but in Web service we can get the data in raw form like json,xml etc
+
+        in Webapplication we can deploy our html page in webserver only like browse software etc
+        but in Webservice we can use that raw data for browser software or anytype of application
+        in any technology.
+
+        Web application response is not reusable because we deploy in it web server
+        whereas Web service data is reusable any other application or web application
+        use that data and present it's in their own browser.

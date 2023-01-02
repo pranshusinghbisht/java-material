@@ -1,0 +1,24 @@
+
+
+Q7. Explain what a Primary key, Candidate Key, Prime Attributes,
+and Non-prime Attributes is.
+
+
+ans:
+     
+     A primary key is the column or columns that contain values that uniquely identify each row 
+     in a table. A database table must have a primary key for Optim to insert, update, restore, 
+     or delete data from a database table. Optim uses primary keys that are defined to the database.
+     However, you can also define primary keys to supplement those in the database.
+     
+     A candidate key is a minimal super key or a super key with no redundant attribute. 
+     It is called a minimal superkey because we select a candidate key from a set of super key such 
+     that selected candidate key is the minimum attribute required to uniquely identify the table.
+     
+     A prime attribute is an attribute that is part of any candidate key. It can also be used to uniquely
+     identify a tuple in the schema. A prime attribute in DBMS is also known as a key attribute. A non-prime 
+     attribute is one that is not part of one of the candidate keys.
+     
+     An attribute that is not part of any candidate key is known as non-prime attribute. An attribute that is 
+     a part of one of the candidate keys is known as prime attribute. Non-prime attributes: all attributes except
+     emp_id are non-prime as they are not part of any candidate keys.

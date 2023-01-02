@@ -1,0 +1,70 @@
+
+
+Q2/- What is the HTTP protocol, explain about the HTTP request and the HTTP response.
+
+     HTTP full form is hyper text transfer protocol.
+     wheever we want to communiate between client web browser to web server we need 
+     to use http.
+     http is one type of instruction set to communiate between two different technology
+
+     HTTP request:
+
+     this request is distributed in three parts
+     1)intial request
+     2)request header
+     3)request body
+
+    ->this intial request is also have 3 parts in which first one is method type
+    there is GET,POST,PUT,DELETE this four methods is there.
+    we can select any of above method
+
+   ->second part is uri in that we have to write the page name .uri means universal
+    resource identifier that identify your html page which wil be deploy in web browse.
+
+   ->The last part is version in that we select the http brower ex-1.1,2.x etc
+
+   ->Second part is request header in that there is data in key value pair
+     where key is fixed and value will change as per client request.
+
+   1. Date : date and time on which request is made from the client.
+   2. Host: ipaddress of the client.
+   3. user-agent: from which browser the client has generated the request.
+   4.content-type: type of the data coming from the request body (json, txt, xml, pdf, jpg)
+   5.connection : live or lost(used in social medial platform to show you are online or not)
+   6.cookies: name-value pair text (store you preference)
+
+   we can create our headers also 
+
+   -> third  part is Request body in which we send the data as per client requirment
+   in json or xml or in any other format.GET and DELETE method doesnt have any request
+   body.
+
+
+   HTTP response:
+
+  this request is distributed in three parts
+  1)intial response
+  2)response header
+  3)response body
+
+  ->first part is distributed in three parts status code,status code description and version.
+   in status code it will show a code like 201,299 etc and description it will be
+   mentioned the what that code stands for and version is same as http request.
+
+  ->second part is response header in which here also key value pair is there.
+  in that it's gives some additional information to client and guide the client
+  while displaying the response
+
+  here is some additional information 
+
+  server : 
+  last-modified : 
+  refresh: 10 (after every 10 second web browser will refresh)
+  date:
+  connention: 
+  content-type: "text/html"  , "application/json", "application/pdf" ,"application/xml"
+  set-cookie : 
+  etc..
+
+  ->third part is response body which return the data for Webapplication it gives in html
+   type format and for Webservice it return in raw data form

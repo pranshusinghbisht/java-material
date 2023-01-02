@@ -1,0 +1,24 @@
+
+Q1/- What is a Servlet ? What is the role of the DispatcherServlet in the Spring boot restapplication.
+
+ANS =>
+   Servlet is one type of Controller that controls the flow of web server.
+
+   Whenever any request came from web application or web services
+   servlet takes that request and authenticate or validate the request and
+   pass it to service layer  class.
+
+   after that service layer perform the business logic through data access layer
+   and return the output to servlet class.
+
+   servlet class return the response to web application or web server.
+
+  So in basic servlet is a class which controls the flow of web server.
+
+  But in Spring MVC there is one inbuild Servlet class there whose name 
+  is DispatcherServlet.We just need to configure that class to control the flow
+  but in normal class we have to write everything in servlet class.
+
+
+  but with the Spring Boot, DispatcherServlet is already configured as a front controller of our application.
+  further more Spring boot also provides integrated tomcat server to deploy our application.

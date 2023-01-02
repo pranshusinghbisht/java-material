@@ -1,0 +1,16 @@
+Q/- What is a Spring Bean and Spring container? How to activate the Spring Container in our
+application
+
+ans:
+Spring Bean:
+Any java class, which will be registered with the "Spring container software" is known as Spring bean.
+The Spring bean is basically a POJO class.
+
+
+Spring container:
+In spring application, A pure java class that controls all the spring beans is known as a spring container.
+The Spring container is not like a J2EE container (EJB container, Web container), so no need to install any kind of
+server.
+The Spring container is a lightweight container.it can be activated in any kind of Java Application.
+Note: All the core functionalities provided by the spring framework are available through the spring
+container only.

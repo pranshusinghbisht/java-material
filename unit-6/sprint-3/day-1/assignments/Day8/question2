@@ -1,0 +1,5 @@
+
+Q2/- What is the difference between an Application Server and a Web server
+
+
+Answer:The main difference between Web server and application server is that web server is meant to serve static pages e.g. HTML and CSS, while Application Server is responsible for generating dynamic content by executing server side code e.g. JSP, Servlet or EJB.

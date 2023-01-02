@@ -1,0 +1,39 @@
+
+
+Q2/- How many scopes are there for a Spring Bean, which is the default scope for a Spring
+Bean? Explain with an example
+
+Answer:
+
+
+
+Bean scope:
+A scope indicates the life span of an object of Spring bean.
+Spring f/w defines 4 scopes for a bean:
+1. singleton scope (it is a default scope of spring bean)
+2. prototype scope
+3. request scope
+4. session scope
+Note: request and session scopes are used only in the web-app (spring -mvc module)
+singleton and prototype scope can be used in both web and non-web(standalone) application.
+Singleton scope : it returns same bean class object for all the getBean() method call with the same bean id. i.e
+whenever we are pulling an object with the same id multiple time ,container will return same object.
+Example:
+A obj1 = ctx.getBean("a1",A.class);
+A obj2 = ctx.getBean("a1",A.class);
+System.out.println(obj1 == obj2); //true
+Note: If the same bean class is configured with different id then container creates one more object for that bean, it
+means container makes a spring bean object as a singleton with respect to the id.
+Prototype scope:
+It returns a separate bean class object for every getBean() method call even with the same id also.
+In order to tell the container to put a bean object in a prototype scope we need to mention by
+using "scope" attribute of the <bean> tag.
+Example:
+Spring Day1 26
+<bean id="a1" class="com.masai.A" scope="prototype">
+<property name="message" value="Welcome to Spring.."/>
+</bean>
+ApplicationContext ctx= new ClassPathXmlApplicationContext("applicationContext.xml");
+A obj1 = ctx.getBean("a1",A.class);
+A obj2 = ctx.getBean("a1",A.class);
+System.out.println(obj1 == obj2); //false

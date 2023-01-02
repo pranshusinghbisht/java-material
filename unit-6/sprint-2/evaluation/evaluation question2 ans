@@ -1,0 +1,39 @@
+Q2/- Explain the difference between JPA and Hibernate, and
+
+ans:
+JPA:
+It is defined in javax.persistence package. 
+
+JPA stand for Java Persistence  API .
+It defines the management of relational data in java application.
+
+It is a specification of various ORM  tools implement it for data persistences.
+
+EntityManagerFactory interface is used to  interact with entity for the persistence unit which is link in persistemce file.
+
+It uses the java persistence query language as object oriented query language to perform database operations.
+
+It uses EntityManager interface to create ,update,delete operations and read also for mapped entity classes.
+
+Hibernate:
+It is defined in org.hibernate package. 
+
+Hibernate is an implementation of JPA rules.and hibernate is an Object relational Mapping 
+tool which is usedto save the state of java object into the database.
+
+It is one of the most frequently used JPA immplementation.
+
+It uses the SessionFactory interface to create session instances.
+
+It uses the Hibernate Query Language as a object oriented query language to perform database.
+
+It uses Session interface to create , read and delete operation for mapped entity classes.
+**********************************************************************************************
+
+What are the advantages of using Hibernate over JDBC?
+ans:
+1  hibernate itself takes care of mapping using XML files so developer does not need to write code for mapping;
+JDBC supports only native SQL
+
+2  mapping of Java objects with database tables has to be taken care of in JDBC. hibernate provides transparent persistence; 
+and there is no need to map database tables
