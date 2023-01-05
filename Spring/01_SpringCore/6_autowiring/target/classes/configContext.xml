@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+ https://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+<!--&lt;!&ndash;-->
+
+<!--    <bean class="com.practice.model_xml.Address" name="address">-->
+<!--        <property name="street" value="Temp Luknow"/>-->
+<!--        <property name="city" value="Luknow"/>-->
+<!--    </bean>-->
+
+<!--&lt;!&ndash;
+            <bean class="com.practice.model.Emp" name="emp" autowire="byName" />&ndash;&gt;-->
+<!--&lt;!&ndash;
+             <bean class="com.practice.model.Emp" name="emp" autowire="byType" />&ndash;&gt;-->
+<!--        <bean class="com.practice.model_xml.Emp" name="emp" autowire="constructor" />-->
+
+<!--&ndash;&gt;-->
+
+    <context:annotation-config/>
+
+    <bean class="com.practice.model_annotation.Address" name="address">
+        <property name="street" value="Temp Street"/>
+        <property name="city" value="Lucknow"/>
+    </bean>
+
+    <bean class="com.practice.model_annotation.Emp" name="emp1" />
+
+
+</beans>

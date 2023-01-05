@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+ https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean name="cert" class="com.practice.model.Certificate">
+        <constructor-arg value="Android uding Kotlin" />
+    </bean>
+
+
+    <bean name="person" class="com.practice.model.Person">
+        <constructor-arg value="Ram"/>
+        <constructor-arg value="12" type="int"/>
+        <constructor-arg ref="cert" />
+    </bean>
+    </beans>

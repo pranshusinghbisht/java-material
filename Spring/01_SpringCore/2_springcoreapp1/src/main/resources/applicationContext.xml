@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <bean id="mb" class="com.masai.MyBusinessClass"></bean>
+
+
+<!--    This is for setter injection -->
+   <bean id="c" class="com.setterinjection.Car"></bean>
+   <bean id="b" class="com.setterinjection.Bike"></bean>
+
+  <bean id="t1" class="com.setterinjection.Travel">
+       <property name="numberOFPerson" value="2"></property>
+       <property name="v" ref="c"></property>
+    </bean>
+
+   <bean id="t2" class="com.setterinjection.Travel">
+       <property name="numberOFPerson" value="5"></property>
+       <property name="v" ref="b"></property>
+   </bean>
+
+<!--    This is for constructor injection -->
+
+    <bean id="bi" class="com.constructorinjection.Bike"></bean>
+
+    <bean id="tr1" class="com.constructorinjection.Travel">
+        <constructor-arg name="numberOFPerson" value="5"/>
+        <constructor-arg name="v" ref="bi"/>
+    </bean>
+
+
+
+<!--    Circular Dependecy -->
+
+<!--    <bean id="aobj" class="com.circulardependency.A">-->
+<!--        <constructor-arg name="b1" ref="bobj"></constructor-arg>-->
+<!--    </bean>-->
+    
+    <bean id="aobj" class="com.circulardependency.A">
+        <property name="b1" ref="bobj"></property>
+    </bean>
+
+    <bean id="bobj" class="com.circulardependency.B">
+        <constructor-arg name="a1" ref="aobj"></constructor-arg>
+    </bean>
+
+
+<!--    Application -->
+    <bean id="db" class="com.Application.dao.DAOBean"></bean>
+
+    <bean id="bb" class="com.Application.dao.ServiceBean">
+        <property name="dao" ref="db"></property>
+    </bean>
+
+    <bean id="pb" class="com.Application.dao.PresentationBean">
+        <property name="service" ref="bb"></property>
+    </bean>
+
+
+</beans>
