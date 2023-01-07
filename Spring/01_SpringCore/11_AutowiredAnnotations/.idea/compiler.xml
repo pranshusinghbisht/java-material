@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="6_autowiring" />
+        <module name="5_constructorInject" />
+        <module name="10_BeanLife" />
+        <module name="8_BeanScope" />
+        <module name="10_BeanCycleImplement - Copy" />
+        <module name="6_autowiring - Copy" />
+        <module name="7_ StereotypeAnnotations - Copy" />
+        <module name="CollectionsConfig" />
+        <module name="9_BeanCycleImplement" />
+        <module name="11_Annotations" />
+        <module name="ConfigSpring" />
+        <module name="4_ReferenceInject" />
+        <module name="11_AutowiredAnnotations" />
+      </profile>
+    </annotationProcessing>
+  </component>
+</project>

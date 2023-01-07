@@ -1,0 +1,14 @@
+@Bean
+
+--to register a normal java class with container to make a
+Spring Bean
+
+1. by using <bean> tag
+2. by using stereotype annotation
+3. by using @Bean tag (much more flexible tag)
+
+method level annotation:-
+
+@Autowired -> for object
+@Value -> simple value like -- int, String
+

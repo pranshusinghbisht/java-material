@@ -1,0 +1,24 @@
+#Sterotype Annotations
+
+1. @Component
+2. @Service     -(business logic)
+3. @Repository  -(data access logic)
+4. @Controller  -(presentation logic)
+
+#Component auto-scanning
+
+
+@Repository(value="dao")
+class AccountDao{
+}
+
+here above class will registered with "dao" id.
+
+
+If our spring bean is in protype scope then, Spring
+container will not manage the lifecycle of spring bean
+after giving the object to the client. i.i destroy method
+will not be called on Spring Bean ibj in prototype scope
+
+
+

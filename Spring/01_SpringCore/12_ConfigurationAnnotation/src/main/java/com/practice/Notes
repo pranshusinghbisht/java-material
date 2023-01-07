@@ -1,0 +1,18 @@
+@Configuration annottion is the complete replacement
+of xml file
+
+ClassPathXMLApplicationContext -> AnnotationConfigApplicationContext
+
+
+if more than one packages then we can use like this
+
+@ComponentScan(basePackages = {"com.masai","com.abc"})
+
+
+i can apply @Autowired in setter method,constructor n variable
+but variable wala best variable for faster.
+
+
+container will autmate the setter if we use @Autowired at s
+
+bur setter wala @Auterwired is better

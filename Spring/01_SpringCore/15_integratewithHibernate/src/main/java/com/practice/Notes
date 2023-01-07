@@ -1,0 +1,9 @@
+@Autowired -> for object
+@Value -> simple value like -- int, String
+
+@Value is used to supply dynamc valeus from .properties file
+
+if lot many feilds are there the we can use
+@Autowired
+private Environment env;
+env.getProperty("string")
