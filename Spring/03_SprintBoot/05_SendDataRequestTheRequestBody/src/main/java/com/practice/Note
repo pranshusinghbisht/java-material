@@ -1,0 +1,7 @@
+By default returned value from the @RequestMapping
+annotated method will be treated as logical name
+of physical JSP file. but in order to tell spring boot,
+treat the returned value as raw data then we need to
+make use of @ResponseBody annotatation.
+
+
