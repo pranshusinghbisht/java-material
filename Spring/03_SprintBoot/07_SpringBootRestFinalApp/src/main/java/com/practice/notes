@@ -1,0 +1,10 @@
+ResponseEntity
+
+-- it represents an Http Response including http headers + http body + status code
+
+-- it is very flexible object
+
+ResponseEntity<Student>
+
+
+return new ResponseEntity<Student>(list.get(0),HttpStatus.ACCEPTED)
