@@ -1,0 +1,5 @@
+
+this dependency : spring boot starter web -> dispatcher servelet
+
+
+for getting data in xml we need to add dependency : jackson-dataformat-xml
