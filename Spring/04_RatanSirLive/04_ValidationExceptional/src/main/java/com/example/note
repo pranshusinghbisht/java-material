@@ -1,0 +1,64 @@
+@JsonIgnore // it will hide
+
+
+if we want to ignore some propertyof our domain object from the json request and json response
+then we can use this annotation
+
+
+
+@JsonProperty: using this annotation we can rename our domain class variable names inside the
+json object
+
+this will not affected in d.a.l but it will affected only in json place
+
+
+
+
+
+______________________Input Validation Property________________
+
+hibernate validator api
+
+*1) @AssertTrue
+the value og the boolean field must be true
+
+*2) @AssertFalse
+
+*3) Min
+@Min
+apply on integer value
+
+*4) @Min(18)
+private int age
+
+*4) Max(23)
+
+*5) DecimalMin or Decimal
+
+*6) @NotNull
+the feild must not be emplty
+
+
+*7) @Size(min=3,max=8)
+
+
+*8) @Pattern()
+
+
+*9) @Past
+
+
+*10) @Email
+
+*11) @CreditCardNumber
+
+_________________________________________________
+
+*12) @NotNull : it makes the field mandatory
+*13) @NotBlank : feild should not blank
+*14) @NotEmpty :
+private String username;
+
+{
+"user":"abc"
+}

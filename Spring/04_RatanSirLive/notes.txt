@@ -1,0 +1,35 @@
+Inside a common spring boot except
+
+
+1> applicationn
+
+
+
+public Student
+
+
+
+@JsonIgnore // it will hide
+
+
+if we want to ignore some propertyof our domain object from the json request and json response
+then we can use this annotation
+
+
+
+@JsonProperty: using this annotation we can rename our domain class variable names inside the
+json object
+
+this will not affected in d.a.l but it will affected only in json place
+
+
+
+__________Input Data Validation__________________
+
+--- data which are sent using RequestBody fromt the client need to be validated then only
+service layer meth
+
+
+-> like marks should be integer
+-> passeord should be 8 length atleat
+-> email should be contains '@' 
