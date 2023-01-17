@@ -1,10 +1,9 @@
-package com.masai.app.exception;
+package com.masai.Exceptions;
 
 import java.time.LocalDateTime;
 
 public class MyErrorDetails {
 	public MyErrorDetails() {
-		// TODO Auto-generated constructor stub
 	}
 
 	public MyErrorDetails(LocalDateTime time, String msg, String des) {

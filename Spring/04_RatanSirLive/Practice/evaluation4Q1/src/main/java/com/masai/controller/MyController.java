@@ -34,7 +34,7 @@ public class MyController {
 	
 	
 	@PostMapping("/save")
-	public ResponseEntity<Employee> save(@Valid @RequestBody Employee emp) throws EmployeeException{
+	public ResponseEntity<Employee> save(@RequestBody Employee emp) throws EmployeeException{
 		
 	Employee emp1 = service.registerEmployee(emp);
 	
