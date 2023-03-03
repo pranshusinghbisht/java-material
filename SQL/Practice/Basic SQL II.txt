@@ -1,0 +1,68 @@
+create table STUDENT (
+NAME VARCHAR(20),
+ROLLNO INT,
+BRANCH VARCHAR(20),
+CITY VARCHAR(20)
+);
+
+
+insert into STUDENT values('VIJAYA', 150, 'CSE', 'CHENNAI');
+insert into STUDENT values('SITE', 202, 'ETC', 'KOLKATA');
+insert into STUDENT values('RAVI', 300, 'EEE', 'DELHI');
+insert into STUDENT values('BASU', 165, 'ETE', 'CHENNAI');
+insert into STUDENT values('RASMI', 107, 'ETC', 'RKL');
+insert into STUDENT values('KARAN', 111, 'CSE', 'CTC');
+insert into STUDENT values('REKHA', 117, 'BME', 'BBSR');
+
+
+
+
+1. Count the number of students of each department.
+
+select BRANCH , count(*) 
+from STUDENT group by BRANCH;
+
+2. Count the number of students of each department where the department name starts with ‘E’.
+
+select count(seleBRANCH like 'E%') 
+from STUDENT;
+
+select count(branch like 'E%') 
+from STUDENT;
+
+select * from student
+where branch like 'E%';
+
+
+3. Add a field called MARKS to the table STUDENT which can hold a number upto 8 digit length.
+
+alter table student
+add MARKS int(8);
+
+
+4. Modify the field :”NAME” of the table STUDENT to hold a maximum of 25 character.
+
+alter table student
+modify column NAME varchar(25);
+
+
+
+5. Delete all rows from the table STUDENT where branch is ETC.
+
+delete from STUDENT
+where branch = 'ETC';
+
+
+6. Rename the table STUDENT to STUDINFORMATION.
+
+alter table STUDENT
+rename to STUDINFORMATION;
+
+
+7. Delete all the data part from the table STUDENT.
+
+truncate table student;
+
+8. Destroy the table STUDENT.
+
+drop table STUDENT;
