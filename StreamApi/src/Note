@@ -1,0 +1,20 @@
+#Introduction to Stream
+
+-- These streams are related to Collection frameworks/(Group of objects). These streams are very different from io stream, io streams are the sequennce of data.
+
+-- These streams was introduced in java 1.8 version.
+
+-- Stream API is basically perform bulk operations and process the objects of collection
+
+-- Stream reduced the code length
+
+eg: code: StreamMain1.java
+
+#How to create the object of stream
+
+eg: code: StreamObject
+
+#Stream Operations : Important Stream Methods
+
+
+

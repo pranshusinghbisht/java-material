@@ -1,0 +1,12 @@
+#Introduction
+
+#Java code without stream vs with stream api.
+
+#How to create the object of stream and processing data.
+
+#filter and map methods with example
+
+#other important methods and operations such as
+
+Collect(), sorted(), min(), max(), forEach(), toArrays(), and Stream.of()
+
