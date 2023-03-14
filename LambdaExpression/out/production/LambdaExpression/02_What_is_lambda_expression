@@ -1,0 +1,35 @@
+
+-- it is introduced in 1.8 version.
+-- Lambda is anonymous function
+having :-
+        *> No name
+        *> No Modifier
+        *> No Return Type
+
+
+  public void m(){
+  sop("test");
+  }
+
+
+  () -> {
+  sop("test);
+  }
+
+  #Benefits of Lanmbda
+
+  -- Reduces the lines of code.
+  -- Sequential and parallel execution support by passing behaviour as an argument in method
+  -- to call APIs very effectively
+  -- To Write more Readable, Maintainable and Consise code.
+
+
+  #Important Rules of Lambda
+
+ -- If the body of Lambda Expression contain only one statement then curly braces are optional.
+
+ -- Java compiler also enter the type of variable passed in arguements, hence type is optional.
+
+
+
+

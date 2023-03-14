@@ -1,0 +1,8 @@
+
+-- If the interface contains only one abstract methods then it is functional interface
+
+Ex: Runnable, Callable, Comparable etc.
+
+-- To call lambda we require functional interface.
+
+-- Lambda is used to implemetn functional interface in very simple and short manner.
