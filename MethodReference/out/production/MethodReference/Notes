@@ -1,0 +1,27 @@
+#What is Method Reference in java 8?
+
+Mathod references are a special type of lambda expressions.
+
+They are often used to create simple lambda expressions by referencing existing methods.
+
+Each time when you are using lambda expression to just referring a method, You can replace
+your lambda expression with method reference.
+
+
+
+we can utilisse the written method which is written already using method reference.
+
+
+
+ (::) double colon  (method reference and constructor reference)
+                                                                    //scope resoultion operator in c++
+
+
+
+
+#Type of Method References
+
+1> Static Methods
+2> Instance Methods of particular objects
+3> Constructor
+
