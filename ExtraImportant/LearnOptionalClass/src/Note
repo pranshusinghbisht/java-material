@@ -1,0 +1,15 @@
+#Optional class
+
+-- it is introduced in java 8.
+
+-- To minimise null pointer exception
+
+-- it is tge way to handle null checks
+
+-- it make code clean
+
+-- A container object which may or may not contain a non null value.
+
+-- If value is present (isPresent()) will return true and get() will return value.
+
+--- orElse(T other) , orElseThrow(Supplier ....) etc
